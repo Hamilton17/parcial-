@@ -1,0 +1,27 @@
+{% extends 'layouts/baseparainicio.html' %}
+
+{% block title %} 
+Inicio De Sesión
+{% endblock %}
+
+
+{% block content %}
+			<form action="{{ url_for('registrarse') }}" method="POST">
+			<h1>registrarse</h1>
+			<div>
+			<label for="RUsuario">Usuario</label>
+			<input type="text" id="RUsuario" name="RUsuario">
+			</div>
+			<div >
+				<label for="RCorreo">Correo</label>
+				<input type="email" id="RCorreo" name="RCorreo">
+			</div>
+			<div>
+				<label for="RContraseña">Contraseña</label>
+				<input type="password" id="RContraseña" name="RContraseña">
+			</div>
+			<div>
+				<button type="submit"> Registrar </button>
+			</div>
+			</form>
+{% endblock %}

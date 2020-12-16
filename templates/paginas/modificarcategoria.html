@@ -1,0 +1,20 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} 
+    Editar Categoria
+{% endblock %}
+
+{% block content %}
+<form action="{{ url_for('EditarCategoria') }}" method="POST">
+        <h1>Editar Categoria</h1>
+        <div id="contenido2">
+        <label for="IDC">Identificador</label>
+        <input type="text" id="IDC" name="IDC">
+        <label for="EditarNombreC">Nombre</label>
+        <input type="text" id="EditarNombreC" name="EditarNombreC">
+        <button type="submit" class="btn btn-success">Guardar</button>
+        <button class="btn btn-info"><a href="{{ url_for('categorias') }}" >Volver</a></button>
+        </div>
+</form>
+
+{% endblock %}

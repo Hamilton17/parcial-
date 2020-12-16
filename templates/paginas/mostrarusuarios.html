@@ -1,0 +1,34 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} 
+Usuarios
+{% endblock %}
+
+{% block content %}
+<h1>Usuarios</h1>
+<table> 
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Contraseña</th>
+            <th>Acción</th>
+
+        </tr>
+    </thead>
+    <tbody>{% for lista in usuarios %}
+        <tr>
+            <td>{{ lista[0] }}</td>
+            <td>{{ lista[1] }}</td>
+            <td>{{ lista[2] }}</td>
+            <td>{{ lista[3] }}</td>
+            <td>
+                <button class="btn btn-info"><a href="{{ url_for('modificarusuario') }}" >Editar</a></button>
+                <button class="btn btn-danger"><a href="{{ url_for('borrarusuario') }}" >Eliminar</a></button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

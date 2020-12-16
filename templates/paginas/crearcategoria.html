@@ -1,0 +1,18 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} 
+    Crear Categoria
+{% endblock %}
+
+{% block content %}
+<form action="{{ url_for('crearcategoria') }}" method="POST">
+        <h1>Crear Categoria</h1>
+        <div>
+            <label for="NuevaCategoria">Categoria</label>
+            <input type="text" name="NuevaCategoria" id="NuevaCategoria">
+        <button type="submit" class="btn btn-success">Guardar</button>
+        <button class="btn btn-info"><a href="{{ url_for('categorias') }}" >Volver</a></button>
+        </div>
+</form>
+
+{% endblock %}

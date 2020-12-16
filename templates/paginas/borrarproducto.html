@@ -1,0 +1,17 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} 
+Eliminar Producto
+{% endblock %}
+
+{% block content %}
+<form action="{{ url_for('borrarproducto') }}" method="POST">
+        <h1>Eliminar Producto</h1>
+        <div>
+        <label for="EIDP">Digite El ID Del Producto A Eliminar</label>
+        <input type="text" id="EIDP" name="EIDP">
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <button class="btn btn-info"><a href="{{ url_for('productos') }}" >Volver</a></button>
+        </div>
+</form>
+{% endblock %}
